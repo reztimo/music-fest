@@ -1,5 +1,6 @@
 import React from 'react';
 import bg from "../assets/bg.jpg";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -36,10 +37,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" className='flex w-full justify-center rounded-md text-gray-800 bg-white px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Login</button>
-                            </div>
-                            <div>
-                                <a href="&" className='block text-sm font-medium leading-6 text-white'>Forget Password?</a>
+                                <button type="submit" className='space-y-6 flex w-full justify-center rounded-md text-gray-800 bg-white px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Login</button>
                             </div>
                             <div>
                                 <div className='flex items-center'>
@@ -48,7 +46,12 @@ const Login = () => {
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" className='flex w-full justify-center rounded-md text-gray-800 bg-white px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Register</button>
+                                <a href="&" className='block text-sm font-medium leading-6 text-white'>Forget Password?</a>
+                            </div>
+                            <div>
+                                <Link to="/register">
+                                    <label className="block text-sm font-medium leading-6 text-white">Already have account?<a href="&" className='text-sm font-medium px-2 leading-6 text-white'>Don't have account?</a></label>
+                                </Link>
                             </div>
                         </form>
                     </div>
