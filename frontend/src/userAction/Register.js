@@ -197,7 +197,7 @@ const Register = () => {
                                         </div>
                                         <div>
                                             <Link to="/login">
-                                                <label className="block text-sm font-medium leading-6 text-white">Already have account?<a href="&" className='text-sm font-medium px-2 leading-6 text-white'>Login</a></label>
+                                                <label className="block text-sm font-medium leading-6 text-white">Already have account?<a href="&" className='text-sm font-medium px-2 leading-6 text-white underline'>Login</a></label>
                                             </Link>
                                         </div>
                                     </form>
