@@ -17,6 +17,8 @@ func init() {
 func main() {
 	r := gin.Default()
 
+	r.Use(middlewares.CorsMiddleware())
+
 	// Endpoint-event
 	r.POST("/event", middlewares.RequireAuth, middlewares.AuthorizationMiddleware("Admin"), controllers.CreateResource)
 	r.GET("/event", middlewares.RequireAuth, controllers.GetAllResource)
