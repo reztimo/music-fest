@@ -95,14 +95,14 @@ const Register = () => {
             ) : (
                 <section>
                     <div className='flex justify-center items-center h-screen bg-cover' style={{ backgroundImage: `url(${bg})` }}>
-                        <div className="max-w-xl rounded overflow-hidden shadow-lg max-h-2x1 w-full backdrop-blur-sm bg-black/15">
-                            <div className="box-border max-h-2x1 max-w-2x1 p-12 border-2">
-                                <h1 className='text-center text-2x1 font-bold leading-9 tracking-tight text-white'>Register</h1>
-                                <div className='md:mx-auto md:w-full md:max-w-full py-5'>
+                        <div className="max-w-xl rounded-lg overflow-hidden shadow-lg max-h-2x1 w-full bg-black/60">
+                            <div className="box-border max-h-2x1 max-w-2x1 p-12 border-2 border-black">
+                                <h1 className='text-center text-2x1 font-bold leading-9 tracking-tight text-white text-xl'>Register</h1>
+                                <div className='md:mx-auto md:w-full md:max-w-full py-5 space-y-8'>
                                     <p ref={errRef} className={errMsg ? "errormessage" : "offscreen"} aria-live="assertive">{errMsg}</p>
                                     <form onSubmit={handleSubmit} className='space-y-6'>
                                         <div>
-                                            <label htmlFor='username' className="marker:tracking-tighter block text-sm font-medium leading-6 text-white">
+                                            <label htmlFor='username' className="text-start marker:tracking-tighter block text-sm font-medium leading-6 text-white">
                                                 Username
                                                 <span className={`${validName ? "valid" : "hide"} ml-1`}>
                                                     <FontAwesomeIcon icon={faCheck} />
@@ -123,7 +123,7 @@ const Register = () => {
                                                     aria-describedby="uidnote"
                                                     onFocus={() => setUserFocus(true)}
                                                     onBlur={() => setUserFocus(false)}
-                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-gray-300 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
+                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-red-500 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
                                                 />
                                             </div>
                                             <p id="uidnote" className={`${userFocus && user && !validName ? "instructions" : "offscreen"} marker:tracking-tighter block text-sm font-medium leading-6 text-white`}>
@@ -135,7 +135,7 @@ const Register = () => {
                                         </div>
 
                                         <div>
-                                            <label htmlFor='password' className="block text-sm font-medium leading-6 text-white">
+                                            <label htmlFor='password' className="text-start block text-sm font-medium leading-6 text-white">
                                                 Password
                                                 <span className={`${validPwd ? "valid" : "hide"} ml-1`}>
                                                     <FontAwesomeIcon icon={faCheck} />
@@ -154,7 +154,7 @@ const Register = () => {
                                                     aria-describedby="pwdnote"
                                                     onFocus={() => setPwdFocus(true)}
                                                     onBlur={() => setPwdFocus(false)}
-                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-gray-300 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
+                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-red-500 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
                                                 />
                                                 <p id="pwdnote" className={`${pwdFocus && !validPwd ? "instruction" : "offscreen"} marker:tracking-tighter block text-sm font-medium leading-6 text-white`}>
                                                     <FontAwesomeIcon icon={faInfoCircle} />
@@ -165,7 +165,7 @@ const Register = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <label htmlFor='confirm_pwd' className="block text-sm font-medium leading-6 text-white">
+                                            <label htmlFor='confirm_pwd' className="text-start block text-sm font-medium leading-6 text-white">
                                                 Confirm Password
                                                 <span className={`${validMatch && matchPwd ? "valid" : "hide"} ml-1`}>
                                                     <FontAwesomeIcon icon={faCheck} />
@@ -184,7 +184,7 @@ const Register = () => {
                                                     aria-describedby="confirmnote"
                                                     onFocus={() => setMatchFocus(true)}
                                                     onBlur={() => setMatchFocus(false)}
-                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-gray-300 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
+                                                    className='block w-full px-2 border-0 border-b-2 bg-transparent py-1.5 text-white border-red-500 appearance-none dark:focus:border-white-800 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600 peer sm:text-sm sm:leading-6'
                                                 />
                                                 <p id="confirmnote" className={`${matchFocus && !validMatch ? "instruction" : "offscreen"} marker:tracking-tighter block text-sm font-medium leading-6 text-white`}>
                                                     <FontAwesomeIcon icon={faInfoCircle} />
@@ -193,11 +193,11 @@ const Register = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <button className='flex w-full justify-center rounded-md text-gray-800 bg-white px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' disabled={!validName || !validPwd || !validMatch ? true : false} type="submit">Register</button>
+                                            <button className='mt-14 space-y-6 flex w-full justify-center text-gray-800 bg-white px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' disabled={!validName || !validPwd || !validMatch ? true : false} type="submit">Register</button>
                                         </div>
                                         <div>
                                             <Link to="/login">
-                                                <label className="block text-sm font-medium leading-6 text-white">Already have account?<a href="&" className='text-sm font-medium px-2 leading-6 text-white underline'>Login</a></label>
+                                                <label className="mt-12 block text-sm font-medium leading-6 text-white">Already have account?<a href="&" className='text-sm font-medium px-2 leading-6 text-red-500 underline'>Login</a></label>
                                             </Link>
                                         </div>
                                     </form>
